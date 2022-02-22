@@ -8,6 +8,7 @@ public class MovimentoBola : MonoBehaviour
     public float velocidade = 5.0f;
     private Vector3 direcao;
     GameManager gm;
+    private AudioSource source;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class MovimentoBola : MonoBehaviour
         transform.position = playerPosition + new Vector3(0, 0.5f, 0);
 
         gm = GameManager.GetInstance();
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +60,7 @@ public class MovimentoBola : MonoBehaviour
         }
         else if(col.gameObject.CompareTag("Bloco")){
             direcao = new Vector3(direcao.x, -direcao.y);
+            source.Play();
             gm.pontos++;
         }
         
