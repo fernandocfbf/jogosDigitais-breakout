@@ -1593,6 +1593,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bloco: {fileID: 2357804894108901011, guid: bea5bc62f5c882a40b65cb5ccfd37a9f, type: 3}
+  Inimigo1: {fileID: 21300000, guid: 55bf5833d377e2e41a7755199c38d876, type: 3}
+  Inimigo2: {fileID: 21300000, guid: e33fec446f7ca6f4bad05cf48bbf5bfb, type: 3}
+  Inimigo3: {fileID: 21300000, guid: cd3dc813a722a0a4f823df11cebb809c, type: 3}
 --- !u!1 &1650240415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +1814,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: a0ec52cdc1b83e849ad46664be25178c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34294d744e88b2d44876f0d583ed84d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1831,7 +1834,7 @@ Transform:
   m_GameObject: {fileID: 1692591795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4, z: 0}
-  m_LocalScale: {x: 2, y: 0.5, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1879,7 +1882,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.37, y: 1.83}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -3,7 +3,11 @@ guid: 3510ab337c7ab39448e72918935da959
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Bloco: {fileID: 2357804894108901011, guid: bea5bc62f5c882a40b65cb5ccfd37a9f, type: 3}
+  - Inimigo1: {fileID: 21300000, guid: 55bf5833d377e2e41a7755199c38d876, type: 3}
+  - Inimigo3: {fileID: 21300000, guid: e33fec446f7ca6f4bad05cf48bbf5bfb, type: 3}
+  - Inimigo2: {fileID: 21300000, guid: cd3dc813a722a0a4f823df11cebb809c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

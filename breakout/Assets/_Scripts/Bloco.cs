@@ -11,17 +11,6 @@ public class Bloco : MonoBehaviour{
         
     }
 
-    // Update is called once per frame
-    void Update(){
-        if (strength - damage == 1) 
-            transform.GetComponent<Renderer>().material.color = new Color(0, 255, 255);
-        else if (strength - damage == 2) 
-            transform.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
-        else 
-            transform.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collision){
         damage ++;
         if(damage == strength) Destroy(gameObject);

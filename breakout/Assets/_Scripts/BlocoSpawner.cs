@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class BlocoSpawner : MonoBehaviour{
   public GameObject Bloco;
+  public Sprite Inimigo1;
+  public Sprite Inimigo2;
+  public Sprite Inimigo3;
   GameManager gm;
   GameObject newObject;
-  int randomColor = 0;
-  int[] spritColor;
+  int randomSpaceShip = 0;
+  Sprite randomSprite;
 
   void Start(){
       gm = GameManager.GetInstance();
@@ -19,28 +22,28 @@ public class BlocoSpawner : MonoBehaviour{
           foreach (Transform child in transform) {
               GameObject.Destroy(child.gameObject);
           }
-          for(int i = 2; i < 10; i++){
+          for(int i = 1; i < 10; i++){
               for(int j = 0; j < 4; j++){
-                  randomColor = SetColor();
-                  spritColor = GetColorPattern(randomColor);
-                  Vector3 posicao = new Vector3(-9 + 1.55f * i, 4 - 0.8f * j);
+                  randomSpaceShip = SetSpaceShipe();
+                  randomSprite = GetSpaceShipeLevel(randomSpaceShip);
+                  Vector3 posicao = new Vector3(-9 + 1.75f * i, 4 - 1.3f * j);
                   newObject = Instantiate(Bloco, posicao, Quaternion.identity, transform);
-                  newObject.GetComponent<Renderer>().material.color = new Color(spritColor[0], spritColor[1], spritColor[2]);
-                  newObject.GetComponent<Bloco>().strength = randomColor;
+                  newObject.GetComponent<Bloco>().strength = randomSpaceShip;
+                  newObject.GetComponent<SpriteRenderer>().sprite = randomSprite;
             }
           }
       }
   }
 
-  private int SetColor(){
+  private int SetSpaceShipe(){
     int chooseNumber = Random.Range(1, 4);
     return chooseNumber;
   }
 
-  private int[] GetColorPattern(int num){
-      if (num == 1) return new int[] {0, 0, 0}; //color 1
-      else if (num == 2) return new int[] {255, 0, 0}; //color 2
-      return new int[] {0, 0, 255}; //color 3
+  private Sprite GetSpaceShipeLevel(int num){
+      if (num == 1) return Inimigo1; //color 1
+      else if (num == 2) return Inimigo2; //color 2
+      return Inimigo3; //color 3
   }
 
   void Update(){
