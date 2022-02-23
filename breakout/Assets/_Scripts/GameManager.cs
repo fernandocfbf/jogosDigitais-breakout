@@ -21,7 +21,7 @@ public class GameManager{
    private GameManager(){
        vidas = 3;
        pontos = 0;
-       gameState = GameState.GAME;
+       gameState = GameState.MENU;
    }
    
    public void ChangeState(GameState nextState){
