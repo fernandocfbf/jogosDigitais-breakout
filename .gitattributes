@@ -1,0 +1,20 @@
+* text=auto
+
+*.mat merge=unityyalmmerge eol=lf
+*.anim merge=unityyalmmerge eol=lf
+*.unity merge=unityyalmmerge eol=lf
+*.prefab merge=unityyalmmerge eol=lf
+*.physicsMaterial2D merge=unityyalmmerge eol=lf
+*.physicsMaterial merge=unityyalmmerge eol=lf
+*.asset merge=unityyalmmerge eol=lf
+*.meta merge=unityyalmmerge eol=lf
+*.controller merge=unityyalmmerge eol=lf
+
+# GIT-LFS
+
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
