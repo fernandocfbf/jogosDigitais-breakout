@@ -7,6 +7,8 @@ public class BlocoSpawner : MonoBehaviour{
   public Sprite Inimigo1;
   public Sprite Inimigo2;
   public Sprite Inimigo3;
+  public Sprite Asteroide;
+  int asteroids = 0;
   GameManager gm;
   GameObject newObject;
   int randomSpaceShip = 0;
@@ -30,25 +32,32 @@ public class BlocoSpawner : MonoBehaviour{
                   newObject = Instantiate(Bloco, posicao, Quaternion.identity, transform);
                   newObject.GetComponent<Bloco>().strength = randomSpaceShip;
                   newObject.GetComponent<SpriteRenderer>().sprite = randomSprite;
+                  if(randomSpaceShip == 4){
+                    asteroids += 1;
+                    newObject.GetComponent<Bloco>().breakable = false;
+                  } 
             }
           }
       }
   }
 
   private int SetSpaceShipe(){
-    int chooseNumber = Random.Range(1, 4);
+    int chooseNumber = Random.Range(1, 5);
     return chooseNumber;
   }
 
   private Sprite GetSpaceShipeLevel(int num){
       if (num == 1) return Inimigo1; //color 1
       else if (num == 2) return Inimigo2; //color 2
-      return Inimigo3; //color 3
+      else if (num == 3) return Inimigo3; //color 3
+      else return Asteroide;
   }
 
   void Update(){
-      if (transform.childCount <= 0 && gm.gameState == GameManager.GameState.GAME){
+      if (transform.childCount <= asteroids && gm.gameState == GameManager.GameState.GAME){
+          asteroids = 0;
           Construir();
+          
       }
   }
 }

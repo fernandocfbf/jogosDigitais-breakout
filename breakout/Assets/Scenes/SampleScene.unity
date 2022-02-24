@@ -1771,6 +1771,7 @@ MonoBehaviour:
   Inimigo1: {fileID: 21300000, guid: 55bf5833d377e2e41a7755199c38d876, type: 3}
   Inimigo2: {fileID: 21300000, guid: e33fec446f7ca6f4bad05cf48bbf5bfb, type: 3}
   Inimigo3: {fileID: 21300000, guid: cd3dc813a722a0a4f823df11cebb809c, type: 3}
+  Asteroide: {fileID: 21300000, guid: 60279d2566fbe9c41966c600d34b9911, type: 3}
 --- !u!1 &1650240415
 GameObject:
   m_ObjectHideFlags: 0
